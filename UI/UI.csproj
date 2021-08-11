@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B40F6136-CF8E-4A3D-9480-C90CE2F41021}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UI</RootNamespace>
+    <AssemblyName>UI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ChnCharInfo">
+      <HintPath>..\lib\ChnCharInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\lib\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DishInfoList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DishInfoList.Designer.cs">
+      <DependentUpon>DishInfoList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DishTypeInfoList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DishTypeInfoList.Designer.cs">
+      <DependentUpon>DishTypeInfoList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFactory.cs" />
+    <Compile Include="HallInfoList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HallInfoList.Designer.cs">
+      <DependentUpon>HallInfoList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerInfoList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerInfoList.Designer.cs">
+      <DependentUpon>ManagerInfoList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerLogin.Designer.cs">
+      <DependentUpon>ManagerLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberInfoList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberInfoList.Designer.cs">
+      <DependentUpon>MemberInfoList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberTypeInfoList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberTypeInfoList.Designer.cs">
+      <DependentUpon>MemberTypeInfoList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderInfoList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderInfoList.Designer.cs">
+      <DependentUpon>OrderInfoList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderPay.Designer.cs">
+      <DependentUpon>OrderPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TableInfoList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableInfoList.Designer.cs">
+      <DependentUpon>TableInfoList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="test\PinyinTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test\PinyinTest.Designer.cs">
+      <DependentUpon>PinyinTest.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DishInfoList.resx">
+      <DependentUpon>DishInfoList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DishTypeInfoList.resx">
+      <DependentUpon>DishTypeInfoList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HallInfoList.resx">
+      <DependentUpon>HallInfoList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerInfoList.resx">
+      <DependentUpon>ManagerInfoList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerLogin.resx">
+      <DependentUpon>ManagerLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberInfoList.resx">
+      <DependentUpon>MemberInfoList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberTypeInfoList.resx">
+      <DependentUpon>MemberTypeInfoList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderInfoList.resx">
+      <DependentUpon>OrderInfoList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderPay.resx">
+      <DependentUpon>OrderPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="TableInfoList.resx">
+      <DependentUpon>TableInfoList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test\PinyinTest.resx">
+      <DependentUpon>PinyinTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bll\Bll.csproj">
+      <Project>{f7182dee-9944-43aa-9f34-4fd4bb8db3a5}</Project>
+      <Name>Bll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{ff2340e7-899a-4611-83b7-308f818aa067}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{71dc4c24-adb3-414f-a520-32067c4b024e}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\desk1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\desk2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\loginBg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\menuBg.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\menuDish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\menuManager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\menuMember.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\menuOrder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\menuQuit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\menuTable.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
